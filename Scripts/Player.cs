@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Player : MonoBehaviour, ICatcheable
+public class Player : MonoBehaviour, ICatcheable, ICoinAbsorber
 {
    const float GRAVITY_AMOUNT = 20f;
 
@@ -70,6 +70,11 @@ public class Player : MonoBehaviour, ICatcheable
    void ICatcheable.Freed()
    {
       ChangeState(new PlayerGravity(this));
+   }
+
+   void ICoinAbsorber.CoinAbsorbed(Coin coin)
+   {
+
    }
 
 

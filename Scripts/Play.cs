@@ -39,6 +39,7 @@ public class Play : MonoBehaviour
       joiner.SetParent(parent);
    }
 
+   [SerializeField] Player player;
    [SerializeField] List<GameObject> levels;
 
    private void Won()
@@ -59,6 +60,10 @@ public class Play : MonoBehaviour
       }
 
       levels[levelIndex].SetActive(true);
+   }
 
+   private void Start()
+   {
+      player.gameObject.SetActive(true);
    }
 }
