@@ -107,6 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerTime: 0.25
-  travelTime: 0.1
+  travelTime: 0.25
   start: {fileID: 8184383446287646361}
   end: {fileID: 0}

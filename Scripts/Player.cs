@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class Player : MonoBehaviour, ICatcheable, ICoinAbsorber
+public class Player : MonoBehaviour, ICatcheable, ICoinAbsorber, IDamageable
 {
    const float GRAVITY_AMOUNT = 20f;
 
    [SerializeField] float groundDistance = 0.7f;
    [SerializeField] LayerMask groundLayer;
+
+
    private PlayerState state;
    private Rigidbody rig;
 
@@ -77,6 +79,10 @@ public class Player : MonoBehaviour, ICatcheable, ICoinAbsorber
 
    }
 
+   void IDamageable.GetDamage(float damage)
+   {
+
+   }
 
    private void ChangeState(PlayerState state)
    {

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Play : MonoBehaviour
@@ -12,7 +11,7 @@ public class Play : MonoBehaviour
       // Disable previous level
       if(levelIndex > 0)
       {
-         instance.levels[levelIndex - 1].SetActive(false);
+         instance.levels[levelIndex - 1].Hide();
       }
 
       levelIndex++;
@@ -20,7 +19,7 @@ public class Play : MonoBehaviour
       // Enable next level or win
       if(levelIndex < instance.levels.Count)
       {
-         instance.levels[levelIndex].SetActive(true);
+         instance.levels[levelIndex].Show();
       }
       else
       {
@@ -28,42 +27,32 @@ public class Play : MonoBehaviour
       }
    }
 
-   /// <summary>
-   /// Set as child of the current level
-   /// </summary>
-   /// <param name="joiner"></param>
-   public static void JoinNextLevel(Transform joiner, GameObject currentLevel)
-   {
-      var parent = instance.levels[instance.levels.IndexOf(currentLevel) + 1].transform;
-
-      joiner.SetParent(parent);
-   }
-
    [SerializeField] Player player;
-   [SerializeField] List<GameObject> levels;
+   [SerializeField] int startingLevelIndex;
+   [SerializeField] List<Level> levels;
 
    private void Won()
    {
-
    }
 
    private void Awake()
    {
       instance = this;
-      levelIndex = 0;
+      levelIndex = startingLevelIndex;
 
 
       // Hide all levels and show the first level
       foreach (var level in levels)
       {
-         level.SetActive(false);
+         level.Hide();
       }
 
-      levels[levelIndex].SetActive(true);
+      levels[levelIndex].Show();
    }
 
    private void Start()
    {
+      player.Position = levels[levelIndex].StartPosition;
       player.gameObject.SetActive(true);
    }
 }

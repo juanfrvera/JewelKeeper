@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2984607317422124105}
   - component: {fileID: 2984607317422124108}
   - component: {fileID: 2984607317422124109}
-  - component: {fileID: 2984607317422124106}
   - component: {fileID: 2984607317422124107}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,19 +63,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2984607317422124106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2984607317422124104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc02f1cc2452194ab00f8556f8fd403, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotation: {x: 10, y: 0, z: 20}
 --- !u!114 &2984607317422124107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +86,8 @@ GameObject:
   - component: {fileID: 2984607318171756018}
   - component: {fileID: 2984607318171756020}
   - component: {fileID: 2984607318171756019}
-  m_Layer: 0
+  - component: {fileID: 1242935207693849051}
+  m_Layer: 13
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,3 +155,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1242935207693849051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2984607318171756017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc02f1cc2452194ab00f8556f8fd403, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotation: {x: 10, y: 0, z: 20}

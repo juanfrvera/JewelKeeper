@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7886631246046814176}
   - component: {fileID: 7886631246046814177}
   - component: {fileID: 7886631246046814182}
-  - component: {fileID: 7886631246046814109}
+  - component: {fileID: 1245848734}
   m_Layer: 12
   m_Name: MoveEnemy
   m_TagString: Untagged
@@ -111,7 +111,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &7886631246046814109
+--- !u!114 &1245848734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7886631246046814183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca4567682049464c8a6c5e159943077, type: 3}
+  m_Script: {fileID: 11500000, guid: 85163e4d95958a44692eb3bf0b1d30e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
